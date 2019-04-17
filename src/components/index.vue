@@ -51,7 +51,7 @@
 			<div class="row">
 
 				<!-- Single Service -->
-				<div class="col-lg-4 col-md-6 col-12" v-for="item in word">
+				<div class="col-lg-4 col-md-6 col-12 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.3s" v-for="item in word">
 					<div class="service text-center" @mouseenter="enterword" @mouseleave="leaveword">
 						<h5>{{item.h}}</h5>
 						<p>{{item.p}}</p>
@@ -77,6 +77,7 @@
 <script>
 import slide from 'base/slide'
 import list from 'base/list'
+import { WOW } from 'wowjs'
 export default {
   data() {
   	return{
@@ -115,7 +116,16 @@ export default {
   		setTimeout(() => {
   			window.addEventListener('scroll', this.handleScroll)
   		},20)
-		
+      this.$nextTick(() => {
+      var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live:false
+          })
+              wow.init()
+      })	
 	},
   methods:{
   	handleScroll () {

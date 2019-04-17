@@ -35,6 +35,7 @@
 import slide from 'base/slide'
 import isotope from 'vueisotope'
 import imagesLoaded from 'vue-images-loaded'
+
 export default {
 	 directives: {
           imagesLoaded

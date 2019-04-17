@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueLazyload from 'vue-lazyload'  //引入这个懒加载插件
 
+import 'animate.css'
+
 Vue.use(VueLazyload, {
   preLoad: 1.3,
 /*  error: 'dist/error.png',*/
